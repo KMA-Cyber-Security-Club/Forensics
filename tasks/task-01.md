@@ -1,4 +1,4 @@
-~Author:DangKhai~ copyright-internet
+~Author:DangKhai~
 **<h1>TASK-01</h1>**
 ***<h2>Challenge</h2>***
   `Format: Đề-Link`
