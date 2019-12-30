@@ -1,3 +1,4 @@
+~Author:Dangkhai~
 ***<h2>0.Steganography</h2>***
 
   `[+] Là gì:` Là kỹ thuật giấu các thông điệp,tin nhắn, hình ảnh,bla bla dưới dạng một thông điệp,hình ảnh ,bla bla khác. Nhằm mục đích chỉ dành cho những người có kỹ năng, mật khẩu,... xem được.</br>
