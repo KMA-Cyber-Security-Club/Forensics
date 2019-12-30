@@ -1,0 +1,1 @@
+~Author:DangKhai~ copyright-internet
