@@ -1,5 +1,5 @@
 ## Write-up cách giải challenge
-Sau khi kiểm tra 1 lượt với các tool cơ bản: file, strings, binwalk, foremost,... không có kết quả thì với zsteg, chúng ta đã thấy có dấu hiệu:<br/>
+Sau khi kiểm tra 1 lượt với các tool cơ bản: file, strings, binwalk, foremost,... không có kết quả thì với zsteg, chúng ta đã thấy có dấu hiệu của flag:<br/>
 ![Pixel1](2.1.png)<br/>
 Sau khi extract file png đó, chúng ta đã nhận được flag:<br/>
 ![Pixel2](2.2.png)<br/>
