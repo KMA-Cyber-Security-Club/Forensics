@@ -1,0 +1,69 @@
+`*0.Steganography*`
+
+  `[+] Là gì:` Là kỹ thuật giấu các thông điệp,tin nhắn, hình ảnh,bla bla dưới dạng một thông điệp,hình ảnh ,bla bla khác. Nhằm mục đích chỉ dành cho những người có kỹ năng, mật khẩu,... xem được.
+  Link tham khảo: https://whitehat.vn/threads/forensic-6-steganography.2409/
+  *Tóm tắt đề phòng link một mai không còn nữa =)
+  Các mức độ:
+  -Cơ bản:
+      + Dùng các tool Stegsolve,binwalk,exiftool,strings,steghide,audacity,sonic visualiser,wireshark... để xem các thông điệp đơn giản,không dùng các cách encrypt hoặc kỹ thuật steg khác để ẩn thông tin.
+          -> Cần nắm rõ, thành thạo xử dụng các công cụ, đặc biệt hiểu rõ đặc điểm khi nào dùng tool a hoặc tool b
+  -Nâng cao:
+      + Thông điệp được ẩn bằng các cách phức tạp hơn.
+      ví dụ:
+          I.Dùng các mã màu rgb để tương đương với mã char ẩn thông điệp,crypto để mã hóa thông điệp 2 x n lớp.
+          II.Thay đổi signature hình ảnh hoặc thay đổi tất cả các byte hex của tệp, xor với 1 key nào đó.
+          III...
+              -> Cần hiểu rõ các khái niệm ví dụ, RGB, decode cơ bản, khóa GPB,header signature,...
+              -> Thông thạo một số ngôn ngữ lập trình, coding giải quyết các vấn đề tìm thông điệp khi các công cụ cơ bản không áp dụng được
+   [-]: Các solution:
+      + :https://medium.com/@FourOctets/ctf-tidbits-part-1-steganography-ea76cc526b40
+      + :https://github.com/shiltemann/CTF-writeups-public/blob/master/IceCTF-2018/writeup.md
+      + :https://medium.com/@kamransaifullah786/hsctf-6-forensics-challenges-solutions-162da84549db
+      + :https://shankaraman.wordpress.com/category/ctf/stegano/
+      + :https://dominicbreuker.com/post/stego_book_of_secrets/
+   => Đọc 10 page đầu google về từ khóa này!
+
+1 Image (ổ đĩa)
+  [+] Là gì: Giống như 1 phần ổ đĩa, và bạn có nhiệm vụ khai thác những dữ liệu bên trong
+  [-] Khi được cung cấp file ổ đĩa, cần mount(gắn) file ổ đĩa như ổ đĩa thông thường trong máy tính, dùng các công cụ như autopsy,FTK,.. để recover ỗ đĩa.
+  [-]: Các solution:
+     + :https://www.jaiminton.com/Defcon/DFIR-2019/
+     + :https://codisec.com/whitehat11-wyginwys/
+     + :http://periciadigitaldf.blogspot.com/
+   => Đọc 3 page đầu google về từ khóa này!
+2 Network Forensic
+  [+] Là gì: Khai thác các thông tin được truy xuất qua mạng, các tập tin phân tích thường là các tập tin pcap đã snap bằng wireshark,tshark,...
+  [-] Cần: Hiểu về các kiến thức network: Protocol,method,tcp,ip,...,sử dụng thành thạo một số công cụ như wireshark,tshark,...
+  Các mức độ:
+  -Cơ bản:
+      + Các dạng bài sử dụng giao thức không mã hóa http để trao đổi, chúng ta cần follow các gói tin đó để tìm ra thông điệp, hoặc các thông điệp được ẩn giấu mà không dùng kĩ thuật gì cao siêu.
+  -Nâng cao:
+      + Sử dụng giao thức mã hóa https,tcp,dhcp,... Các gói tin truyền tải đều có thể chứa thông điệp, cần follow kĩ,nâng cao hơn là các dạng bài dùng các khóa công khai,khóa bí mật xyz đễ giải mã các thông điệp bị mã hóa
+  [-]:Các solution:
+    + :https://infamoussyn.wordpress.com/2013/07/16/cysca-13-network-forensic-question-writeup/
+    + :https://leigh-annegalloway.com/44con-ctf-writeup/
+    + :https://github.com/ctfs/write-ups-2016/tree/master/su-ctf-2016/forensics/network-forensics-200
+   => Đọc 3 page đầu google về từ khóa này!
+3 Memory Forensic
+  [+] Là gì: Là sử dụng kiến trúc quản lý bộ nhớ trong máy tính để ánh xạ, trích xuất các tập tin đang thực thi và đang lưu tạm trong bộ nhớ, các bộ nhớ RAM được trích xuất dưới dạng image.
+  [-]: Cần: Hiểu về kiến trúc máy tính,các hàm system, cách thức máy tính hoạt động...
+  [-]: Các dạng hay gặp:
+      + Thông điệp được ẩn trong các tệp được lưu trong máy...
+      + Thông điệp được ẩn trên các truy cập mạng của nạn nhân...
+      + Thông được được ẩn trong các tiến trình đã dùng của nạn nhân...
+      +...
+   [-]: Các solution:
+      + :https://malware.news/t/grehack-2017-write-up-forensic-400/17085
+      + :https://medium.com/hackstreetboys/hsb-presents-otterctf-2018-memory-forensics-write-up-c3b9e372c36c
+      + :https://medium.com/@melanijan93/write-up-memory-forensics-in-the-def-con-dfir-ctf-c2b50ed62c6b
+      + :https://www.rootusers.com/google-ctf-2016-forensic-for1-write-up/
+      + :https://www.rootusers.com/trend-micro-ctf-2017-forensic-200-write/
+      + :https://minhtt159.wordpress.com/2018/01/30/acebear-ctf-2018-misc-forensics-write-up/
+      + :https://rawsec.ml/en/seccon-2016-100-forensics-memory-analysis/
+    => Đọc 5 page đầu google về từ khóa này!
+
+ =========================================================================================================
+ Kết : 
+ -Mảng này không phãi chỉ cần đọc nhiều mà cần làm nhiều để rèn luyện. Mảng này cần khá nhiều kiến thức kinh nghiệm để biết rằng vói bài này thì cần dùng cách nào để forensics.
+ -Con đường tốt nhất để hiểu: Hãy tìm hiểu tại sao người ra đề tạo ra được file ẩn thông điệp đó, hoặc tự ra đề cho chính bẩn thân
+ ====================================CẢM ƠN- CHÚC MAY MẮN ================================================
